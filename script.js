@@ -12,10 +12,16 @@ ratingComponents.forEach((ratingComponent) => {
 });
 
 function onSubmit() {
+  // submitBtn.removeAttribute("disabled");
+  if (rating == undefined) {
+    return;
+  }
+
   ratingContent.classList.add("hide");
 
   selectedRating.innerHTML = rating;
   thankyouContent.classList.remove("hide");
+
   // console.log("Submit");
 }
 
